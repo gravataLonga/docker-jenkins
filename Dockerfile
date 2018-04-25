@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y php7.2 php7.2-cli php7.2-fpm php7.2-xml
 # USER jenkins
 
 WORKDIR /
-ADD .
+ADD . /
 RUN chmod +x install-composer.sh && ./install-composer.sh
 RUN mv composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
