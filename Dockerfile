@@ -5,7 +5,9 @@ USER root
 
 # Install the latest PHP version.
 RUN apt-get update
-RUN apt-get install apt-transport-https lsb-release ca-certificates
+RUN apt-get install apt-transport-https 
+RUN apt-get install lsb-release
+RUN apt-get install ca-certificates
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
 
